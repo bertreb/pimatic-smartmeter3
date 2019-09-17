@@ -1,9 +1,9 @@
 pimatic-smartmeter3
-===============
+===================
 
-Reading "Smartmeter" energy usage through P1 port.
-This pluging is a based on the versions of saberone and rick00001. 
-This plugin supports serialport version 6 and gives the possibility to change the regex formulas for the energy values in the device config.
+Reading "Smartmeter" energy (electricity and gas) usage through P1 port.
+This plugin is a based on the smartmeter versions of saberone and rick00001. 
+This plugin supports serialport version 6 and gives the possibility to change the regex formulas for the energy values in the device config. 
 
 Installation
 ------------
@@ -13,7 +13,6 @@ To enable the smartmeter plugin add this to the plugins in the config.json file.
 ...
 {
   "plugin": "Smartmeter3"
-  
 }
 ...
 ```
@@ -26,9 +25,9 @@ and add the following to the devices
   "class": "Smartmeterdevice3",
   "name": "smartmeter3",
   "serialport": "/dev/ttyUSB0",
-  "baudRate" : 9600,
-  "dataBits" : 7,
-  "parity" : "even",
+  "baudRate" : 115200,
+  "dataBits" : 8,
+  "parity" : "none",
   "stopBits" : 1,
   "flowControl" : true
 }
@@ -39,14 +38,16 @@ Then install through the standard pimatic plugin install page.
 
 Configuration
 -------------
-You can configure what serialport to use, and the serialport settings. You do this in the devices section, as you can see in the installation section.
+You can configure what serialport to use and the serialport settings.
 
 
-"It might work on your machine"-version
+Different smartmeter versions
 ---------------------------------------
-The current version has been tested on my own P1 smartmeter, and some Pimatic users have reported that it works for them too.
-I cannot give any guarantees that it will work on every P1 smartmeter. But to try and improve support for different P1 smartmeters
-, I have added a simple commandline node.js app/tool that dumps the P1 data straight to a file. Please share this dump if you want
+The current version has been tested with a DSMR5.0 smartmeter.
+If your smartmeter version uses different data field you can change the RegEx in de device config to meet your smartmeter.
+
+A simple commandline tool can help to get your smartmeter data and build your RegExp. 
+The tool is a node.js app/tool that dumps the P1 data straight to a file. Please share this dump if you want
 your P1 smartmeter brand/model to be supported. Or better yet, fork + create pull request. ;)
 
 Run the following commands from the root of this plugin.
@@ -57,4 +58,19 @@ chmod +x logP1.js
 ./logP1.js
 ```
 
+RegEx configuration
+---------------------------------------
+Below the 5 customizable Regular Expression (RegEx) fields in the device section. The RegEx is used to filter out the specific data. A RegEx string need double backslashes (escape character in strings).
+
+```
+{
+  "t1TotalUsage": "^1-0:1\\.8\\.1\\(0+(\\d+\\.\\d+)\\*kWh\\)",
+  "t2TotalUsage": "^1-0:1\\.8\\.2\\(0+(\\d+\\.\\d+)\\*kWh\\)",
+  "activeTariff": "^0-0:96.14.0\\(0+(.*?)\\)",
+  "actualUsage": "^1-0:1.7.0\\((.*?)\\*",
+  "gasTotalUsage" : "^0-1:24\\.2\\.1\\(\\d{12}.\\)\\(0+(\\d+\\.\\d+)\\*m3\\)"
+}
+```
+ 
 If you have issues, please create an issue overe here : https://github.com/bertreb/pimatic-smartmeter3/issues
+
