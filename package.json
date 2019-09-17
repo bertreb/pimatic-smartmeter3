@@ -2,9 +2,9 @@
   "name": "pimatic-smartmeter3",
   "description": "Get energy usage data from P1 SmartMeter in pimatic",
   "author": {
-    "name": "Saber Karmous",
-    "email": "saberone@gmail.com",
-    "url": "https://github.com/saberone"
+    "name": "Bert Gierveld",
+    "email": "gitbertreb@gmail.com",
+    "url": "https://github.com/bertreb"
   },
   "main": "pimatic-smartmeter3",
   "files": [
@@ -14,20 +14,20 @@
     "device-config-schema.coffee",
     "p1meterdata.js"
   ],
-  "homepage": "https://github.com/rick00001/Smartmeter2.git",
+  "homepage": "https://github.com/bertreb/smartmeter3.git",
   "keywords": [
     "pimatic",
     "devices"
   ],
-  "version": "0.0.18",
-  "private": false,
+  "version": "0.0.1",
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/rick00001/Smartmeter2.git"
+    "url": "https://github.com/bertreb/smartmeter3.git"
   },
   "configSchema": "pimatic-smartmeter3-config-schema.coffee",
   "dependencies": {
-    "serialport": "^6.2.2"
+    "serialport": "6.2.2"
   },
   "peerDependencies": {
     "pimatic": ">=0.8.0 <1.0.0"
