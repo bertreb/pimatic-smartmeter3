@@ -12,7 +12,7 @@
     "README.md",
     "pimatic-smartmeter3-config-schema.coffee",
     "device-config-schema.coffee",
-    "p1meterdata.js"
+    "logP1.js"
   ],
   "homepage": "https://github.com/bertreb/smartmeter3.git",
   "keywords": [
@@ -20,7 +20,7 @@
     "devices"
   ],
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/bertreb/smartmeter3.git"
