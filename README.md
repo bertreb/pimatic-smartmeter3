@@ -39,11 +39,13 @@ Then install through the standard pimatic plugin install page.
 Configuration
 -------------
 You can configure what serialport to use and the serialport settings.
-The device provides the following 4 values
+
+The device provides the following 4 values:
 - Actual usage (Watt)
 - Tariff 1 total usage (kWh)
 - Tariff 2 total usage (kWh)
 - Gas total usage (m3)
+
 The number of decimals in de Gui can be changed via xAttributeOptions.
 
 Different smartmeter versions
