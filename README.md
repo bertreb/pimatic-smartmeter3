@@ -47,8 +47,7 @@ The current version has been tested with a DSMR5.0 smartmeter.
 If your smartmeter version uses different data field you can change the RegEx in de device config to meet your smartmeter.
 
 A simple commandline tool can help to get your smartmeter data and build your RegExp. 
-The tool is a node.js app/tool that dumps the P1 data straight to a file. Please share this dump if you want
-your P1 smartmeter brand/model to be supported. Or better yet, fork + create pull request. ;)
+The tool is a node.js app/tool that dumps the P1 data straight to a file. 
 
 Run the following commands from the root of this plugin.
 
@@ -60,7 +59,7 @@ chmod +x logP1.js
 
 RegEx configuration
 ---------------------------------------
-Below the 5 customizable Regular Expression (RegEx) fields in the device section. The RegEx is used to filter out the specific data. A RegEx string need double backslashes (escape character in strings).
+Below the 5 customizable Regular Expression (RegEx) fields in the config.json device section. The RegEx is used to filter out the specific data. A RegEx string need double backslashes (escape character in strings). If you edit the RegEx in the gui Device page, you can use the normal single backslashes.
 
 ```
 {
@@ -73,4 +72,3 @@ Below the 5 customizable Regular Expression (RegEx) fields in the device section
 ```
  
 If you have issues, please create an issue overe here : https://github.com/bertreb/pimatic-smartmeter3/issues
-
