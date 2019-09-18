@@ -40,11 +40,11 @@ Configuration
 -------------
 You can configure what serialport to use and the serialport settings.
 
-The device provides the following 4 values:
-- Actual usage (Watt)
-- Tariff 1 total usage (kWh)
-- Tariff 2 total usage (kWh)
-- Gas total usage (m3)
+The device provides the following 4 variables:
+- Actual usage (Watt) : $<device id>.actualusage
+- Tariff 1 total usage (kWh) : $<device id>.tariff1totalusage
+- Tariff 2 total usage (kWh) : $<device id>.tariff2totalusage
+- Gas total usage (m3) : $<device id>.gastotalusage
 
 The number of decimals in de Gui can be changed via xAttributeOptions.
 
