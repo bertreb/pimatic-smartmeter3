@@ -6,5 +6,7 @@
     * Corrected git links
 * 20190918, v0.0.3
     * Added acronyms for T1, T2 and gas
-
-    
+* 20190918, v0.0.4
+    * sync de git repository
+* 20190918, v0.0.5
+    * Updated the README.md with the way to edit the RegEx in the config.json or in the gui device page
