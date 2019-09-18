@@ -32,14 +32,17 @@ module.exports = (env) ->
         description: "Tariff 1 total usage(T1)"
         type: "number"
         unit: " kWh"
+        acronym: "T1"
       tariff2totalusage:
         description: "Tariff 2 total usage(T2)"
         type: "number"
         unit: " kWh"
+        acronym: "T2"
       gastotalusage:
-        description: "Actual usage"
+        description: "Gas total usage"
         type: "number"
         unit: " m3"
+        acronym: "Gas"
     actualusage: 0.0
     activetariff: 1
     tariff1totalusage: 0.0
