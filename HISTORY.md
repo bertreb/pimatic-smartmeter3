@@ -10,3 +10,5 @@
     * sync de git repository
 * 20190918, v0.0.5
     * Updated the README.md with the way to edit the RegEx in the config.json or in the gui device page
+* 20190924, v0.0.6
+    * Added info for when to use this plugin in README.md 

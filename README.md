@@ -3,7 +3,8 @@ pimatic-smartmeter3
 
 Reading "Smartmeter" energy (electricity and gas) usage through P1 port.
 This plugin is a based on the smartmeter versions of saberone and rick00001. 
-This plugin supports serialport version 6 (node v4 and v8) and gives the possibility to change the regex formulas for the energy values in the device config. 
+This plugin supports serialport version 6 (node v4 and v8) and gives the possibility to read ascii based Datagrams from Smartmeters (like the DSMR). You can change the regex formulas for the energy values in the device config. 
+If this plugin doesn't fit, you could use the more advanced pimatic-smartmeter-obis plugin (https://github.com/bertreb/pimatic-smartmeter-obis).
 
 Installation
 ------------
