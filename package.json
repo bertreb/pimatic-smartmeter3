@@ -12,7 +12,8 @@
     "README.md",
     "pimatic-smartmeter3-config-schema.coffee",
     "device-config-schema.coffee",
-    "logP1.js"
+    "logP1.js",
+    "LICENSE"
   ],
   "homepage": "https://github.com/bertreb/pimatic-smartmeter3.git",
   "keywords": [
